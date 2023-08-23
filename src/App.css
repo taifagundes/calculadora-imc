@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn {
+    background: linear-gradient(
+        95.23deg,
+        #EFAC99 21.43%,
+        #FFBABA 50.63%,
+        #E577A8 100%,
+        #C85C8E 117.04%);
+    box-shadow: 0px 4.42184px 107.23px #FFBABA;
+}
+.btn:hover {
+    background: linear-gradient(
+        92.23deg,
+        #C85C8E 21.43%,
+        #E577A8 50.63%,
+        #efac99 100%,
+        #FFBABA 117.04%);
+}
+.gradient,
+.active {
+    background: linear-gradient(
+        92.23deg,
+         21.43%,
+        #FFBABA 50.63%,
+        #EFAC99 100%,
+        #E577A8 117.04%);
+}
+.active {
+    color: #3C442E;
+    padding: 1rem;
+    border-radius: 100%;
+}
+
+@layer base{
+    body {
+        @apply font-secondary text-lg leading-8 text-primary;
+    }
+    .btn {
+        @apply font-primary text-primary font-medium;
+    }
+    .btn-sm {
+        @apply h-[40px] rounded-full px-6 text-sm;
+    }
+    .btn-lg {
+        @apply h-[56px] rounded-full px-10 text-base;
+    }
+    .btn-link {
+        @apply text-base text-[40px];
+    }
+    .text-gradient {
+        @apply bg-gradient-to-r text-transparent bg-clip-text from-secondary to-custom-color hover:from-custom-color hover:to-secondary font-bold font-primary;
+    }
+    .seciton {
+        @apply py-8 lg:py-24 lg:h-screen flex items-center;
+    }
+}
